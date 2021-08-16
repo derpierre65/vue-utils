@@ -17,12 +17,12 @@ export default {
 	},
 	methods: {
 		setInterval(name, callback, time, executeOnCreate) {
-            console.log('[Vue-Utils.Interval] Created interval ' + name);
+			console.log('[Vue-Utils.Interval] Created interval ' + name);
 			this.clearInterval(name);
 			Vue.set(this.mixinIntervals, name, window.setInterval(callback, time));
 
 			if (executeOnCreate) {
-                console.log(`[Vue-Utils.Interval] Executed Interval ${name} directly.`);
+				console.log(`[Vue-Utils.Interval] Executed Interval ${name} directly.`);
 				callback();
 			}
 		},
@@ -30,7 +30,7 @@ export default {
 			if (this.mixinIntervals[name]) {
 				window.clearInterval(this.mixinIntervals[name]);
 				Vue.delete(this.mixinIntervals, name);
-                console.debug('[Vue-Utils.Interval] Destroyed interval ' + key);
+				console.debug('[Vue-Utils.Interval] Destroyed interval ' + key);
 			}
 		},
 	},
