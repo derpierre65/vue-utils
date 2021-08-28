@@ -38,7 +38,7 @@ export default {
 				Vue.delete(this.mixinIntervals, name);
 
 				if ( debug ) {
-					console.debug('[Vue-Utils.Interval] Destroyed interval ' + key);
+					console.debug('[Vue-Utils.Interval] Destroyed interval ' + name);
 				}
 			}
 		},
