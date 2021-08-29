@@ -16,7 +16,7 @@ export default {
 		}
 	},
 	methods: {
-		setInterval(name, callback, time, executeOnCreate) {
+		setInterval(callback, time, name, executeOnCreate) {
 			this.clearInterval(name);
 			Vue.set(this.mixinIntervals, name, window.setInterval(callback, time));
 
